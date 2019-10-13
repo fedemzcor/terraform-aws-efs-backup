@@ -4,7 +4,7 @@ data "aws_iam_policy_document" "resource_role" {
     effect  = "Allow"
     actions = ["sts:AssumeRole"]
 
-    principals = {
+    principals {
       type        = "Service"
       identifiers = ["ec2.amazonaws.com"]
     }
@@ -42,7 +42,7 @@ data "aws_iam_policy_document" "role" {
     effect  = "Allow"
     actions = ["sts:AssumeRole"]
 
-    principals = {
+    principals {
       type = "Service"
 
       identifiers = [
